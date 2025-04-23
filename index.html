@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#iiooio_stripes_gen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>#iiooio_stripes_gen</h1>
+        <div class="main-content">
+            <div class="controls-panel">
+                <div class="upload-container">
+                    <div class="upload-area" id="dropZone">
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                        <div class="upload-content">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <p>Drag & drop an image or click to upload</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="sortDirection">Sort Direction:</label>
+                        <select id="sortDirection">
+                            <option value="horizontal">Horizontal</option>
+                            <option value="vertical">Vertical</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="sortOrder">Sort Order:</label>
+                        <select id="sortOrder">
+                            <option value="darkToLight">Dark to Light</option>
+                            <option value="lightToDark">Light to Dark</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="threshold">Brightness Threshold:</label>
+                        <input type="range" id="threshold" min="0" max="255" value="128">
+                        <span id="thresholdValue">128</span>
+                    </div>
+                    <div class="button-group">
+                        <button id="processBtn" disabled>Process Image</button>
+                        <button id="resetBtn" disabled>Reset Image</button>
+                        <button id="downloadBtn" disabled>Download Result</button>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-container">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
